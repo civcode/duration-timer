@@ -2,15 +2,11 @@
 #include <iostream>
 #include <thread>
 #include <vector>
-//#include <cmath>
-//#include <limits>
 
 #include "duration_timer.h"
 
 using std::cout;
 using std::endl;
-
-//using namespace std::chrono;
 
 int main() {
 
@@ -20,6 +16,7 @@ int main() {
     auto t1 = std::chrono::high_resolution_clock::now();
     std::vector<double> data;    
 
+    /* Change timer duration / interval */
     //interval_timer.set_interval(std::chrono::milliseconds(20));
     //interval_timer.set_interval(std::chrono::microseconds(2000));
     //interval_timer.set_interval(std::chrono::seconds(1));
@@ -33,13 +30,10 @@ int main() {
             cout << "dt = " << dt_ms << " ms" << endl;
             // int dt_us = std::chrono::duration_cast<std::chrono::microseconds>(interval_duration).count();
             // cout << "dt = " << dt_us << " us" << endl;
-            //data.push_back(static_cast<double>(dt_ms);
         }
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
     }
     cout << "loop_timer has expired" << endl;
     
-    //cout << "\nnumber of samples = " << data.size() << endl;
-
     return 0;
 }
