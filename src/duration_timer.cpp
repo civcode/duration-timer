@@ -48,3 +48,7 @@ bool DurationTimer::is_expired() {
    return false; 
 }
 
+void DurationTimer::restart() {
+    target_ = high_resolution_clock::now() + interval_;
+}
+

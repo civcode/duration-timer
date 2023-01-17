@@ -11,6 +11,7 @@ public:
     DurationTimer(const std::chrono::seconds interval);
 
     bool is_expired();
+    void restart();
     void set_interval(const std::chrono::microseconds interval);
     void set_interval(const std::chrono::milliseconds interval);
     void set_interval(const std::chrono::seconds interval);
