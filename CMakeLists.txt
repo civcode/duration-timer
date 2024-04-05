@@ -14,8 +14,8 @@ add_library(durationtimer STATIC src/duration_timer.cpp)
 
 target_include_directories(durationtimer PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_executable(example example/timer_example.cpp)
-target_link_libraries(example durationtimer)
+add_executable(duration_timer_example example/timer_example.cpp)
+target_link_libraries(duration_timer_example durationtimer)
 
 # Install instructions are needed for FetchContent to work 
 install(TARGETS durationtimer DESTINATION lib)
